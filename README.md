@@ -13,7 +13,7 @@ File contents:
 
 How to use the code:
 1. Download the pretrained model for the VesslNN dataset from [here](https://drive.google.com/file/d/1VzICZUf92pclEf0BCDDuCjJD68d_GnYe/view?usp=sharing).
-2. Set the values of "src_folder" and "src_folder_GT" in **test_single.p** to the location where the test images and ground truth images are stored. 
+2. Set the values of "src_folder" and "src_folder_GT" in **test_single.py** to the location where the test images and ground truth images are stored. 
 3. Run code: python test_single.py --checkpoint "the/location/where/you/stored/your/pre-trained/model".
 
 
