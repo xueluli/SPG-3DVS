@@ -17,3 +17,4 @@ How to use the code:
 3. Run code: python test_single.py --checkpoint "the/location/where/you/stored/your/pre-trained/model".  
 
 
+A more elegant version will come soon.
