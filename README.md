@@ -9,6 +9,7 @@ File contents:
 **test_single.py**: test code for SPG-3DVS.  
 **Unet_bidrecionalLSTM_EdgeBranch_test_revised_3con2_Noise.py**： code for the proposed model.  
 **dense_121_edge_test_revised_3con.py**: code for the proposed model.  
+**biconvlstm_EdgeBranch**: code for the proposed model.
 **utils.py**: other code for running the program.  
 
 How to use the code:  
