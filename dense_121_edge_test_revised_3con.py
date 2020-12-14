@@ -575,49 +575,6 @@ class Dense(nn.Module):
         # edge = self.convT(self.ResT(self.convT1(edge)))
         edge = self.ResT(self.convT1(edge))
 
-        # print("A {}".format((A!=A).any()))
-        #R = self.decoder_R(x, x1, x2, x4, opt)
-        #G = self.decoder_G(x, x1, x2, x4, opt)
-        #B = self.decoder_B(x, x1, x2, x4, opt)
-        #A = torch.cat([R,G,B], 1)
-        # T = self.decoder_T(x, x1, x2, x4, opt)
-        # # print("T {}".format((T!=T).any()))
-        # #dehaze = A   
-        # T = self.sigT(self.convT(self.ResT(self.convT1(T))))
-        # T = T.repeat(1, 3, 1, 1)
-        # # print("T {}".format((T!=T).any()))
-        # J_AT = self.JGen(A=A, t=T, I=x)
-
-        # J_direct = self.decoder_J(x, x1, x2, x4, opt)
-
-        # # print("J_direct {}".format((J_direct!=J_direct).any()))
-        # w = self.decoder_w(x, x1, x2, x4, opt)
-        # w = self.sigw(self.convw(self.Resw(self.convw1(w))))
-        # w = w.repeat(1, 3, 1, 1)
-
-        # J_total = w*J_direct + (1-w)*J_AT
-
-        #A = dehaze		
-        #dehaze = self.relu((self.bn_refine1(self.refine1(dehaze))))
-        #dehaze = self.relu((self.bn_refine2(self.refine2(dehaze))))
-        #shape_out = dehaze.data.size()
-        # print(shape_out)
-        #shape_out = shape_out[2:4]
-
-        #x101 = F.avg_pool2d(dehaze, 32)
-        #x1010 = F.avg_pool2d(dehaze, 32)
-        #x102 = F.avg_pool2d(dehaze, 16)
-        #x1020 = F.avg_pool2d(dehaze, 16)
-        #x103 = F.avg_pool2d(dehaze, 8)
-        #x104 = F.avg_pool2d(dehaze, 4)
-        #x1010 = self.upsample(self.relu(self.bn_conv1010(self.conv1010(x101))), size=shape_out)
-        #x1020 = self.upsample(self.relu(self.bn_conv1020(self.conv1020(x102))), size=shape_out)
-        #x1030 = self.upsample(self.relu(self.bn_conv1030(self.conv1030(x103))), size=shape_out)
-        #x1040 = self.upsample(self.relu(self.bn_conv1040(self.conv1040(x104))), size=shape_out)
-
-        #dehaze = torch.cat((x1010, x1020, x1030, x1040, dehaze), 1)
-        #dehaze = self.refine3(dehaze)
-        #dehaze = (dehaze + A)/2.0            
         # pdb.set_trace()
         return mask, edge
 
